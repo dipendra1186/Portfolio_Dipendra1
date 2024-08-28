@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dipendra Timalsina | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <!-- Photo on Left Side -->
+            <div class="header-photo">
+                <img src="photo.jpg" alt="Dipendra Timalsina">
+            </div>
+            <div class="header-text">
+                <h1>Dipendra Timalsina</h1>
+                <p>Aspiring IT Professional & Creative Designer</p>
+                <nav>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Explore my journey in IT and design</p>
+            <a href="CV.pdf" class="btn">Download Resume</a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <!-- Photo on the Left Side -->
+            <div class="about-photo">
+                <img src="about.JPG" alt="Dipendra Timalsina">
+            </div>
+            <!-- Description on the Right Side -->
+            <div class="about-description">
+                <h2>About Me</h2>
+                <p>I'm Dipendra Timalsina, a student at Herald College studying IT. I have experience in photography and
+                    design, with certifications in Adobe Photoshop.</p>
+                <p>In addition to my studies, I have worked as a photographer at a photo studio for 6 months, where I
+                    honed my skills in photography and client interaction.</p>
+                <p>During my third semester at Herald College, I worked as a frontend developer for a college project,
+                    developing user interfaces and improving web functionalities.</p>
+                <p>Furthermore, I was a part of a group project where I contributed as a QA, ensuring the quality and
+                    functionality of the project deliverables.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skill">
+                    <img src="tech.jpg" alt="Technical Skills">
+                    <div>
+                        <h3>Technical Skills</h3>
+                        <ul>
+                            <li>Figma - Creating user interfaces and experiences.</li>
+                            <li>Adobe Photoshop - Professional photo editing and design.</li>
+                            <li>HTML, CSS, JavaScript - Web development and design.</li>
+                            <li>Python - Programming and automation.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="communication.jpg" alt="Soft Skills">
+                    <div>
+                        <h3>Soft Skills</h3>
+                        <ul>
+                            <li>Communication - Effective verbal and written communication.</li>
+                            <li>Teamwork - Collaborative and cooperative in team settings.</li>
+                            <li>Problem-Solving - Analytical thinking and solution-oriented.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <!-- Add your project items here -->
+                <div class="portfolio-item">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project 1</h3>
+                    <p>Photography project description here.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>Design project description here.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Photographer - Photo Studio</h3>
+                <p><strong>Duration:</strong> 6 months</p>
+                <p>Worked as a photographer, handling various client projects, editing photos, and delivering
+                    high-quality results.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Frontend Developer - Herald College</h3>
+                <p><strong>Duration:</strong> Third Semester</p>
+                <p>Developed user interfaces for college projects, focusing on creating responsive and user-friendly
+                    designs.</p>
+            </div>
+            <div class="experience-item">
+                <h3>QA Tester - Group Project</h3>
+                <p>Participated in quality assurance testing for a group project, ensuring the project met all
+                    requirements and was free of defects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="eea16d4b-1a7d-4088-90e8-8b4c19b5b24f">
+        <input type="hidden" id="replyToInput" name="replyto">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Submit Form</button>
+    </form>
+</section>
+
+<script>
+    // Add event listener to the form to handle submission
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent default form submission
+
+        const form = e.target;
+        const emailInput = form.querySelector('input[name="email"]').value;
+        const replyToInput = document.getElementById('replyToInput');
+
+        replyToInput.value = emailInput; // Set the replyto value
+
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form)
+        }).then(response => {
+            if (response.ok) {
+                form.reset(); // Clear the form fields after successful submission
+                alert('Thank you! Your message has been sent successfully.'); // Show thank you message
+            } else {
+                alert('There was an issue sending your message. Please try again.');
+            }
+        }).catch(error => {
+            alert('There was an error: ' + error.message);
+        });
+    });
+</script>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Dipendra Timalsina. All Rights Reserved.</p>
+            <p>Phone: <a href="tel:+9779842418043">9842418043</a></p>
+            <p>Location: Kalanki, Kathmandu, Nepal</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/dipendra-timalsina-24776725a/" target="_blank" class="social-icon"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/dipendra1186" target="_blank" class="social-icon"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.facebook.com/dipendra.timalsina.969" target="_blank" class="social-icon"><i 
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/its_dipendra7/" target="_blank" class="social-icon"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

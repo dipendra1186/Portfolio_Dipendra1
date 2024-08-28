@@ -1,0 +1,378 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.header-photo {
+    margin-bottom: 20px;
+}
+
+.header-photo img {
+    border-radius: 50%;
+    width: 150px;
+    /* Increased size */
+    height: 150px;
+    /* Increased size */
+    object-fit: cover;
+    border: 3px solid #fff;
+    /* Added border for better visibility */
+}
+
+.header-text {
+    text-align: center;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.header-text p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+nav {
+    margin-top: 20px;
+    border-top: 2px solid #444;
+    /* Added border for separation */
+    padding-top: 10px;
+    margin: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+nav a {
+    color: #fff;
+    font-size: 1em;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav a:hover {
+    color: #3498db;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero Section with Slow Fade-In Effect */
+#hero {
+    background: #cedbe4;
+    color: #fff;
+    text-align: center;
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 2s forwards;
+    /* Slow fade-in effect */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #fff;
+    color: #3498db;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #3498db;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* About Me Section */
+#about {
+    background: #fff;
+    padding: 40px 0;
+    overflow: hidden;
+    /* Clear floats */
+}
+
+.about-photo {
+    float: left;
+    width: 40%;
+    margin-right: 20px;
+}
+
+.about-photo img {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid #f4f4f4;
+    /* Added border for better visibility */
+}
+
+.about-description {
+    float: right;
+    width: 55%;
+}
+
+.about-description h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-description p {
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+
+    .about-photo,
+    .about-description {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .about-description {
+        margin-top: 20px;
+    }
+}
+
+/* Skills Section */
+#skills {
+    background: #f4f4f4;
+    padding: 40px 0;
+}
+
+.skills-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.skill h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Portfolio Section */
+#portfolio {
+    background: #fff;
+    padding: 40px 0;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.portfolio-item h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.portfolio-item p {
+    color: #666;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Experience Section */
+#experience {
+    background: #f4f4f4;
+    padding: 40px 0;
+}
+
+.experience-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+/* Contact Section */
+#contact {
+    background: #fff;
+    padding: 40px 0;
+    text-align: center;
+    /* Center-align heading and form */
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+    /* Add space below the heading */
+    font-size: 2em;
+    /* Adjust font size as needed */
+    color: #333;
+    /* Set color for better readability */
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    /* Align form fields to the left */
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-icon {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    color: #3498db;
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .skills-list {
+        flex-direction: column;
+    }
+
+    .skill {
+        margin-bottom: 20px;
+    }
+}
