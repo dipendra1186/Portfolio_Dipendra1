@@ -16,7 +16,7 @@
         <div class="container">
             <!-- Photo on Left Side -->
             <div class="header-photo">
-                <img src="Photo.jpg" alt="Dipendra Timalsina">
+                <img src="photo.jpg" alt="Dipendra Timalsina">
             </div>
             <div class="header-text">
                 <h1>Dipendra Timalsina</h1>
@@ -39,7 +39,7 @@
         <div class="container">
             <h2>Welcome to My Portfolio</h2>
             <p>Explore my journey in IT and design</p>
-            <a href="CV.pdf" class="btn">Download Resume</a>
+            <a href="Dipendra TImalsina Resume.pdf" class="btn">Download Resume</a>
         </div>
     </section>
 
@@ -97,27 +97,45 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="section">
-        <div class="container">
-            <h2>Portfolio</h2>
-            <div class="portfolio-grid">
-                <!-- Add your project items here -->
-                <div class="portfolio-item">
-                    <img src="project one.png" alt="Project 1">
-                    <h3>Project 1</h3>
-                    <p>DR Groups is a Figma project designed to showcase products in a seamless, user-friendly manner, eliminating any physical
-                    or mental barriers for the user. It also offers exclusive access to substantial discounts on electronic platforms,
-                    making the shopping experience both efficient and cost-effective..</p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="project2.jpg" alt="Project 2">
-                    <h3>Project 2</h3>
-                    <p>Loading...</p>
-                </div>
+<!-- Portfolio Section -->
+<section id="portfolio" class="section">
+    <div class="container">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+            <!-- Project 1 -->
+            <div class="portfolio-item">
+                <a href="https://www.figma.com/proto/me3v5tv07O4pf994TdH9LQ/%F0%9F%9A%80-Project-Starter-Template(Share)-(Copy)?node-id=5531-5638&t=YSHQLxhLJFFaf6FT-0&scaling=min-zoom&content-scaling=fixed&page-id=2%3A3&starting-point-node-id=5531%3A5638"
+                    target="_blank">
+                    <img src="new.png" alt="Project 1">
+                </a>
+                <h3>Project 1</h3>
+                <p>DR Groups is a Figma project designed to showcase products in a seamless, user-friendly manner,
+                    eliminating any physical or mental barriers for the user. It also offers exclusive access to
+                    substantial discounts on electronic platforms, making the shopping experience both efficient and
+                    cost-effective.</p>
+            </div>
+            <!-- Project 2 -->
+            <div class="portfolio-item">
+                <a href="https://dipendra1186.github.io/Weather-Forecast/" target="_blank">
+                    <img src="second pro.png" alt="Project 2">
+                </a>
+                <h3>Project 2</h3>
+                <p>A dynamic web application that allows users to search for the current weather conditions of any city.
+                    The app provides
+                    real-time weather data, including temperature, humidity, wind speed, and weather conditions. It
+                    features a user-friendly
+                    interface where users can input a city name and receive detailed weather information, including a
+                    weather icon that
+                    represents the current conditions.</p>
             </div>
         </div>
-    </section>
+        <!-- View More Projects Button -->
+        <div class="view-more">
+            <a href="https://github.com/dipendra1186" class="btn">View More Projects</a>
+        </div>
+    </div>
+</section>
+
 
     <!-- Experience Section -->
     <section id="experience" class="section">
@@ -185,8 +203,6 @@
     });
 </script>
 
-
-
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -206,6 +222,18 @@
         </div>
     </footer>
 
+
 </body>
+<div class="loader"></div>
+<script>
+    window.addEventListener('load', () => {
+        const loader = document.querySelector('.loader');
+        if (loader) {
+            loader.style.display = 'none';
+        }
+    });
+</script>
+
+
 
 </html>
